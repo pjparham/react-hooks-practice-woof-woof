@@ -3,12 +3,7 @@ import React from "react";
 function DogInfo({ dog, setDog }){
     const {name, image, isGoodDog} = dog
 
-    function handleClick(){
-        console.log(dog)
-    }
-
-    function handleGoodDogChange(e){
-        console.log(!isGoodDog)
+    function handleGoodDogChange(){
         fetch(`http://localhost:3001/pups/${dog.id}`, {
           method: "PATCH",
           headers: {
